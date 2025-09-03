@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteur</title>
+    <link rel="stylesheet" href="/src/style.css"> 
+
+    <style>
+        *, *:before, *:after { box-sizing: border-box; }
+        body {
+            margin: 2rem;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Compteur de mensonges</h1>
+
+    <!-- compteur de base  -->
+     <div class="card">
+       <button id="counter" type="button" class="btn btn-warning btn-sm sm:btn-md"></button>
+     </div>
+
+     <!-- compteur de mensonges v1 -->
+      <div class="flex justify-center mt-8">
+            <div class="card w-96 bg-gradient-to-br from-error/10 to-warning/10 shadow-xl border border-error/20">
+              <div class="card-body text-center">
+                <h2 class="card-title justify-center text-2xl mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-error" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                  </svg>
+                  Compteur de Mensonges
+                </h2>
+
+                <!-- Affichage du compteur -->
+                <div class="stats shadow mb-6">
+                  <div class="stat place-items-center">
+                    <div class="stat-title text-error font-semibold">Mensonges détectés</div>
+                    <div class="stat-value text-6xl text-error" id="mensonge-counter">0</div>
+                    <div class="stat-desc text-error/70">depuis le début</div>
+                  </div>
+                </div>
+
+                <!-- Boutons d'action -->
+                <div class="card-actions justify-center gap-4">
+                  <button id="increment-btn" class="btn btn-error btn-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg>
+                    +1 Mensonge
+                  </button>
+
+                  <button id="reset-btn" class="btn btn-outline btn-warning">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                    Reset
+                  </button>
+                </div>
+
+                <!-- Barre de progression des mensonges -->
+                <div class="mt-6">
+                  <div class="text-sm text-base-content/70 mb-2">Niveau de mensonge</div>
+                  <progress id="mensonge-progress" class="progress progress-error w-full" value="0" max="100"></progress>
+                  <div class="text-xs text-base-content/50 mt-1" id="mensonge-level">Débutant</div>
+                </div>
+
+                <!-- Historique récent -->
+                <div class="mt-6">
+                  <div class="collapse collapse-arrow bg-base-200">
+                    <input type="checkbox" />
+                    <div class="collapse-title text-sm font-medium">
+                      Historique des mensonges
+                    </div>
+                    <div class="collapse-content">
+                      <div id="mensonge-history" class="text-xs space-y-1 max-h-32 overflow-y-auto">
+                        <!-- L'historique sera ajouté ici -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+   <script type="module" src="compteur.js"></script>
+</body>
+</html>

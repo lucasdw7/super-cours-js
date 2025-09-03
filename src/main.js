@@ -17,7 +17,7 @@ if (copyrightElement) {
 console.log(import.meta.env.VITE_SOME_KEY); // "123"
 console.log(import.meta.env.DB_PASSWORD); // undefined 
 
-// Si on veux voir le resultat il faut mettre VITE_au debut de la variable d'environement.
+// Si on veux voir le resultat il faut mettre "VITE_ " au debut de la variable d'environement.
 
 //* (base) On est dans /src/main.js
 // ! ⬇ Ancienne version de base (counter)
