@@ -1,22 +1,26 @@
 //modification texte du header
-console.log('Hello World from main.js');
+console.log("Hello World from main.js");
 
-const siteName ='lulu';
-const username = document.getElementById('site-name');
-if (username){
-    username.textContent = siteName;
+const siteName = "lulu";
+const username = document.getElementById("site-name");
+if (username) {
+  username.textContent = siteName;
 }
 
-const copyrightElement = document.getElementById('copyright-year');
+const copyrightElement = document.getElementById("copyright-year");
 if (copyrightElement) {
-    const currentYear = new Date().getFullYear();
-    copyrightElement.textContent = `Copyright © ${currentYear} - Tous droits réservés par ${siteName}`;
+  const currentYear = new Date().getFullYear();
+  copyrightElement.textContent = `Copyright © ${currentYear} - Tous droits réservés par ${siteName}`;
 }
 
+// on test les variables d'environement
+console.log(import.meta.env.VITE_SOME_KEY); // "123"
+console.log(import.meta.env.DB_PASSWORD); // undefined 
 
+// Si on veux voir le resultat il faut mettre VITE_au debut de la variable d'environement.
 
-//* On est dans /src/main.js
-// ! ⬇ Ancienne version de base (counter) 
+//* (base) On est dans /src/main.js
+// ! ⬇ Ancienne version de base (counter)
 // import './style.css'
 // import javascriptLogo from './javascript.svg'
 // import viteLogo from '/vite.svg'

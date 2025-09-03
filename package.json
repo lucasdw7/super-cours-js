@@ -16,6 +16,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",
     "dompurify": "^3.2.6",
+    "marked": "^16.2.1",
     "tailwindcss": "^4.1.12"
   }
 }
