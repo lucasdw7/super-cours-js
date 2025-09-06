@@ -1,49 +1,70 @@
 console.log('-------FUNCTION-------');
-// On déclare la fonction sous le nom maSuperFonction et le travail qu'elle doit faire
+
+// Déclaration d’une fonction classique (nommée)
+// Ici la fonction s’appelle maSuperFonction
 function maSuperFonction(){
-    // ICI on code ce que doit faire la ƒ°
+    // Ce que la fonction va exécuter quand on l’appelle
     console.log('Ma fonction fonctionne');
-    console.log(10+2);
+    console.log(10+2); // Exemple : affiche 12
 };
-// On va exec au moins 1 fois notre ƒ°
+
+// Exécution de la fonction (appel)
 maSuperFonction();
-// Quand une ƒ° a besoin de paramètres ???
+
+
+// ===============================
+// Fonction avec paramètre
+// ===============================
+// Ici on attend un argument (unNom) qui sera utilisé à l’intérieur
 function disMonNom(unNom){
     console.log(unNom);
 };
+
+// On appelle la fonction en lui passant un paramètre
 disMonNom('JACKO');
+
+
 console.log('-------PARAMETRE & RETURN-------');
+
 //! EXO 5 : Function
-// TODO : créer une fonction qui prend un nombre en paramètre
-// TODO : La ƒ° doit afficher en console: 33 + le nombre reçu en paramètre
-// TODO : créer une autre fonction qui prend 2 nombres en paramètre
-// TODO : Cette seconde ƒ° doit afficher en console l'ADDITION des 2 nombres reçus en paramètre
+// Fonction qui prend un nombre en paramètre
+// Objectif : ajouter 33 à ce nombre et afficher le résultat
 function fonctionUn(unTruc){
     console.log(33+unTruc);
 }
-fonctionUn(7);
+fonctionUn(7); // => 40
 
+
+// Fonction qui prend 2 paramètres et affiche leur addition
 function fonctionDeux(unTruc,unBidule){
     console.log(unBidule+unTruc);
 }
-fonctionDeux(10,88);
+fonctionDeux(10,88); // => 98
 
-//? Quand une fonction doit return quelquechose
+// ===============================
+// Exemple avec return
+// ===============================
+// Ici, la fonction calcule une soustraction et RENVOIE le résultat
 function moins(a,b){
     return a-b;
 };
-// à l'execution de la ƒ° le resultat du calcul (ce que la fonction renvoit/return)
-// sera stocké dans une variable monResultat
-let monResultat = moins(99,20);
-// Ou alors, le résultat est direct return dans un console.log()
-console.log('Monresultat:',moins(99,20));
+
+// Le return permet de stocker le résultat dans une variable
+let monResultat = moins(99,20); // => 79
+console.log('Monresultat:',monResultat);
+
+// Ou bien utiliser directement dans un console.log()
 console.log('exec de la fonction direct dans console.log() : ',moins(99,20));
 
 
-// PARAMETRE PAR DEFAUT
-// Si à l'utilisation de la ƒ° on oubli le paramètre
-//  Pas d'érreur car le param par défaut sera 'sarah'
+// ===============================
+// PARAMÈTRE PAR DÉFAUT
+// ===============================
+// Ici, si l’utilisateur n’envoie pas de valeur,
+// le paramètre prendra automatiquement "OuiOui"
 function sayTheName(unNomBidon='OuiOui'){
     console.log(unNomBidon);
 };
-sayTheName();
+
+// Appel sans argument => utilisera la valeur par défaut
+sayTheName(); // => "OuiOui"
